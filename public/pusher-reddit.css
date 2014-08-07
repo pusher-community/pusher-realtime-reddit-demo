@@ -18,6 +18,10 @@ header {
   padding: 15px;
 }
 
+header span.warning {
+  
+}
+
 header a {
   color: #76A7D7;
 }
