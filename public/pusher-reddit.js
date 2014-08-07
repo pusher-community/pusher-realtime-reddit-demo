@@ -44,13 +44,15 @@ $(".typeahead").typeahead({
 });
 
 $('.typeahead').bind("typeahead:selected", function(event, suggestion, name) {
-  var listings = $(event.target).parent().next(".listings");
+  var listings = $(event.target).parent().parent().children(".listings");
   changeReddit(suggestion.value, listings);
 });
 
 var changeReddit = function(subreddit, listings) {
   var subredditLower = subreddit.toLowerCase();
   var listingSubreddit = listings.get(0).dataset.subreddit;
+
+  listings.prev(".listening").get(0).classList.remove("active");
 
   if (pusher.channel(subredditLower)) {
     console.log("Already subscibed to subreddit: " + subredditLower);
@@ -62,6 +64,10 @@ var changeReddit = function(subreddit, listings) {
   }
 
   var channel = pusher.subscribe(subredditLower);
+
+  channel.bind("pusher:subscription_succeeded", function() {
+    listings.prev(".listening").get(0).classList.add("active");
+  });
 
   // Change data attribute
   listings.get(0).dataset.subreddit = subredditLower;
@@ -92,11 +98,11 @@ defaultSubreddits.each(function(index, element) {
   // TODO: Work out how to stop this triggering (duplicating effort) if enter was pressed on typeahead suggestion
   element.addEventListener("keydown", function(e) {
     if(e.keyCode == 13){
-      changeReddit(element.value, $(element).parent().next(".listings"));
+      changeReddit(element.value, $(element).parent().parent().children(".listings"));
     }
   });
 
   if (element.placeholder) {
-    changeReddit(element.placeholder, $(element).parent().next(".listings"));
+    changeReddit(element.placeholder, $(element).parent().parent().children(".listings"));
   };
 });

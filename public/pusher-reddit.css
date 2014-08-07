@@ -100,12 +100,19 @@ ul {
   background-color: #fff;
   border: 1px solid #ccc;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  -webkit-border-radius: 8px;
-     -moz-border-radius: 8px;
-          border-radius: 8px;
+  -webkit-border-radius: 5px 5px 0 0;
+     -moz-border-radius: 5px 5px 0 0;
+          border-radius: 5px 5px 0 0;
   -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
      -moz-box-shadow: 0 5px 10px rgba(0,0,0,.2);
           box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+
+.typeahead, .tt-query, .tt-hint {
+  border-width: 1px;
+  -webkit-border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 0 0;
 }
 
 .tt-suggestion {
@@ -158,4 +165,24 @@ ul {
 
 .github-fork-ribbon {
   background-color: #333;
+}
+
+.listening {
+  background: #F1F9F7;
+  border: solid #ccc;
+  border-width: 0 1px 1px;
+  border-radius: 0 0 5px 5px;
+  color: #1d9d74;
+  display: none;
+  font-size: smaller;
+  padding: 8px 0;
+  text-align: center;
+}
+
+.listening.active {
+  display: block;
+}
+
+.listening .fa {
+  font-size: smaller;
 }
