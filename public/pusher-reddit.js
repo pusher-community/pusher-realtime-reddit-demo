@@ -75,9 +75,9 @@ var changeReddit = function(subreddit, listings) {
     var listingDOM = document.createElement("li");
       
     if (listing.url.search(/\.jpg|\.jpeg|\.png|\.gif$/g) > -1) {
-      listingDOM.innerHTML = "<a href='http://reddit.com" + listing.permalink + "'><img src='" + listing.url + "' title='" + listing.title + "'></a>";
+      listingDOM.innerHTML = "<a href='http://reddit.com" + listing.permalink + "' target='_blank'><img src='" + listing.url + "' title='" + listing.title + "'></a><div class='caption'><a href='http://reddit.com" + listing.permalink + "' target='_blank'>" + listing.title + "</a></div>";
     } else {
-      listingDOM.innerHTML = "<a href='http://reddit.com" + listing.permalink + "'>" + listing.title + "</a>";
+      listingDOM.innerHTML = "<a href='http://reddit.com" + listing.permalink + "' target='_blank'>" + listing.title + "</a>";
     }
 
     listings.get(0).insertBefore(listingDOM, listings.get(0).firstChild);

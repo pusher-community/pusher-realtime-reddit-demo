@@ -3,8 +3,17 @@
 <head>
   <title>Pusher Realtime Data - Reddit</title>
 
+  <link rel="stylesheet" href="gh-fork-ribbon.css">
+  <!--[if lt IE 9]>
+      <link rel="stylesheet" href="gh-fork-ribbon.ie.css">
+  <![endif]-->
+
   <link rel="stylesheet" type="text/css" href="pusher-reddit.css">
 <body>
+  <header>
+    <h1>Realtime Reddit API<span><a href="http://pusher.com">powered by Pusher</a></span></h1>  
+  </header>
+
   <section>
     <input class="typeahead subreddit-input" type="text" placeholder="AskReddit">
     <ul class="listings"></ul>
@@ -23,7 +32,13 @@
   <section>
     <input class="typeahead subreddit-input" type="text" placeholder="EarthPorn">
     <ul class="listings"></ul>
-  </section>  
+  </section>
+
+  <div class="github-fork-ribbon-wrapper right">
+    <div class="github-fork-ribbon">
+      <a href="https://github.com/pusher/pusher-realtime-reddit-demo" target='_blank'>Fork me on GitHub</a>
+    </div>
+  </div>
 
   <script src="http://js.pusher.com/2.2/pusher.min.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>

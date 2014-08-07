@@ -3,7 +3,7 @@
   padding: 0;
 }
 
-html {
+body {
   color: #333;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
@@ -12,15 +12,38 @@ html {
   *overflow-x: hidden;
 }
 
+header {
+  background: #CEE3F8;
+  border-bottom: 1px solid #5F99CF;
+  padding: 15px;
+}
+
+header a {
+  color: #76A7D7;
+}
+
+  header a:hover {
+    text-decoration: underline;
+  }
+
+h1 span {
+  color: #76A7D7;
+  font-size: 0.4em;
+  font-style: italic;
+  font-weight: normal;
+  margin-left: 10px;
+  text-transform: uppercase;
+}
+
 section {
   box-sizing: border-box;
   float: left;
-  padding: 10px;
+  padding: 15px;
   width: 25%;
 }
 
 a {
-  color: #03739c;
+  color: ##0000FF;
   text-decoration: none;
 }
 
@@ -102,14 +125,37 @@ ul {
 }
 
 .listings {
-  margin: 10px 0;
+  margin: 15px 0;
 }
 
 .listings li {
   list-style: none;
-  margin: 0 0 10px 0;
+  margin: 0 0 15px 0;
+  position: relative;
 }
 
 .listings img {
+  border: 1px solid #999;
+  border-radius: 8px 8px 0 0;
+  box-sizing: border-box;
+  line-height: 0;
   width: 100%;
+}
+
+.listings div.caption {
+  background: #999;
+  border-radius: 0 0 8px 8px;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: smaller;
+  margin-top: -5px;
+  padding: 15px;
+}
+
+.listings div.caption a {
+  color: #fff;
+}
+
+.github-fork-ribbon {
+  background-color: #333;
 }
