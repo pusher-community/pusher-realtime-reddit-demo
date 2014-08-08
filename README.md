@@ -3,6 +3,26 @@
 This example shows you how to use the [Pusher](http://pusher.com) Realtime Reddit API, allowing you to subscribe to a live feed for any subreddit.
 
 
+## Running the demo
+
+Make sure you have [Node.js and NPM installed](http://nodejs.org/) (or serve the files in the public directory on your own webserver).
+
+If you decide to use Node.js then you need to install the necessary dependancies:
+
+```
+$ cd /path/to/local/repo
+$ npm install
+```
+
+Then start the server:
+
+```
+$ node app.js
+```
+
+[Open the demo in your browser](http://localhost:5001) and enjoy a realtime feed of Reddit!
+
+
 ## API overview
 
 Here is an overview of the API:
@@ -19,7 +39,7 @@ The realtime Reddit API has been built with simplicity in mind. All you need to 
 
 Here's an example that subscribes to the "/r/AskReddit" subreddit using JavaScript and outputs each new story to the browser console:
 
-```
+```javascript
 // Include the Pusher JavaScript library
 <script src="http://js.pusher.com/2.2/pusher.min.js"></script>
 
