@@ -39,7 +39,7 @@ The realtime Reddit API has been built with simplicity in mind. All you need to 
 
 Here's an example that subscribes to the "/r/AskReddit" subreddit using JavaScript and outputs each new story to the browser console:
 
-```javascript
+```html
 // Include the Pusher JavaScript library
 <script src="http://js.pusher.com/2.2/pusher.min.js"></script>
 
