@@ -63,6 +63,9 @@ var changeReddit = function(subreddit, listings) {
     pusher.unsubscribe(listingSubreddit);
   }
 
+  // Clear any previous stories
+  listings.get(0).innerHTML = "";
+
   var channel = pusher.subscribe(subredditLower);
 
   channel.bind("pusher:subscription_succeeded", function() {
