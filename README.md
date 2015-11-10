@@ -2,7 +2,7 @@
 
 This example shows you how to use the [Pusher](http://pusher.com) Realtime Reddit API, allowing you to subscribe to a live feed for any subreddit.
 
-Demo: http://realtime-reddit-demo.pusher.io
+Demo: http://realtime-reddit-demo.herokuapp.com/
 
 
 ## Running the demo
